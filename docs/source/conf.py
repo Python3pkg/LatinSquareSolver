@@ -55,9 +55,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'LatinSquareSolver'
-copyright = u'2015, Nicholas Rutherford'
-author = u'Nicholas Rutherford'
+project = 'LatinSquareSolver'
+copyright = '2015, Nicholas Rutherford'
+author = 'Nicholas Rutherford'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -231,8 +231,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'LatinSquareSolver.tex', u'LatinSquareSolver Documentation',
-   u'Nicholas Rutherford', 'manual'),
+  (master_doc, 'LatinSquareSolver.tex', 'LatinSquareSolver Documentation',
+   'Nicholas Rutherford', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -261,7 +261,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'latinsquaresolver', u'LatinSquareSolver Documentation',
+    (master_doc, 'latinsquaresolver', 'LatinSquareSolver Documentation',
      [author], 1)
 ]
 
@@ -275,7 +275,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'LatinSquareSolver', u'LatinSquareSolver Documentation',
+  (master_doc, 'LatinSquareSolver', 'LatinSquareSolver Documentation',
    author, 'LatinSquareSolver', 'One line description of project.',
    'Miscellaneous'),
 ]

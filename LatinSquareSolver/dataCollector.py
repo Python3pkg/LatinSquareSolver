@@ -25,20 +25,20 @@ N_TO_TEST = [10]
 
 # Set up header
 TRIALS = 50
-for t in xrange(TRIALS):
+for t in range(TRIALS):
     HEADER += "t" + str(t) + ","
 HEADER = HEADER[:-1]
 
 ofile = open(FILENAME, "w+")
 ofile.write(HEADER + "\n")
 for n in N_TO_TEST:
-    print n
+    print(n)
 
     for k in range(1, n**2-1):
-        print "\t" + str(k)
+        print("\t" + str(k))
         line = "{0},{1}".format(n, k)
 
-        for t in xrange(TRIALS):
+        for t in range(TRIALS):
             st = """
             import latinSquare
             from solver import solve
@@ -48,6 +48,6 @@ for n in N_TO_TEST:
             """.format(n, k)
             line += "," + str(timeit(st, number=1))
 
-        print "\t\t" + line[:20]
+        print("\t\t" + line[:20])
         ofile.write(line + "\n")
 ofile.close()

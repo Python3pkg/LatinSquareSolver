@@ -17,7 +17,7 @@ Solves a latin square.
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import latinSquare
+from . import latinSquare
 
 
 class Solver():
@@ -31,7 +31,7 @@ class Solver():
     def __str__(self):
         """Pretty output"""
         if not self.originalSq.loaded:
-            print "No square loaded. Run 'loadSquare' or 'randSquare' first"
+            print("No square loaded. Run 'loadSquare' or 'randSquare' first")
             return ""
 
         toOut = "Original Square:\n"
@@ -92,7 +92,7 @@ class Solver():
         """Solve the loaded latin square."""
 
         if not self.originalSq.loaded:
-            print "Error: No square loaded."
+            print("Error: No square loaded.")
         else:
             self.sovSq = self._solve(self.originalSq)
 
@@ -133,4 +133,4 @@ if __name__ == "__main__":
     # solv.randSquare(10, 25)
     solv.loadSquare(square)
     solv.solveSquare()
-    print solv
+    print(solv)

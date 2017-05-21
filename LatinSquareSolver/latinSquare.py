@@ -39,7 +39,7 @@ class Hole:
         """
         self.value = 0
         self.valueSet = False
-        self.options = range(n)
+        self.options = list(range(n))
         self.x = 0
         self.y = 0
 
@@ -84,7 +84,7 @@ class LatinSquare:
             solvable Latin square, but there may be more then one solution
             to it.
         """
-        possibleOptions = range(self.n ** 2)  # There are n^2 grid locations
+        possibleOptions = list(range(self.n ** 2))  # There are n^2 grid locations
         selections = random.sample(possibleOptions, self.k)
 
         for i, opt in enumerate(selections):
@@ -188,7 +188,7 @@ class LatinSquare:
             This method will fail quicker than counting the values for
             each row and column and making sure there are no duplicates.
         """
-        good = range(self.n)
+        good = list(range(self.n))
 
         # Check rows
         for row in self.grid:
@@ -237,7 +237,7 @@ class LatinSquare:
                     rowEle.append(ele)
                 elif ele.valueSet:
                     rowEle.append(ele.value)
-            if any([x[1] > 1 for x in Counter(rowEle).items()]):
+            if any([x[1] > 1 for x in list(Counter(rowEle).items())]):
                 return False
         return True
 
@@ -260,7 +260,7 @@ class LatinSquare:
                     colEle.append(ele)
                 elif ele.valueSet:
                     colEle.append(ele.value)
-            if any([x[1] > 1 for x in Counter(colEle).items()]):
+            if any([x[1] > 1 for x in list(Counter(colEle).items())]):
                 return False
         return True
 

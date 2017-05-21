@@ -146,8 +146,8 @@ def test_updateHoleOptions():
 
     sq.checkHoleOptions()
 
-    print len(h1.options)
-    print h1.options
+    print(len(h1.options))
+    print(h1.options)
     assert(len(h1.options) == 2)
     assert(h1.options[0] == 0)
     assert(h1.options[1] == 3)
@@ -162,7 +162,7 @@ def test_updateHoleOptions():
 
 def test_addHoles():
     """addHoles()"""
-    for i in xrange(1, 5**2):
+    for i in range(1, 5**2):
         random.seed(i)
         sq = latinSquare.LatinSquare()
         n = 5
@@ -186,7 +186,7 @@ def test_randSquare():
     assert(sq.isValid())
     assert(len(sq.holes) == k)
     assert(sq.n == n)
-    good = range(n)
+    good = list(range(n))
     for i, x in enumerate(sq.grid[0]):
         if not isinstance(x, latinSquare.Hole):
             assert(x == good[i])
@@ -197,7 +197,7 @@ def test_randSquare():
     assert(sq.isValid())
     assert(len(sq.holes) == k)
     assert(sq.n == n)
-    good = range(n)
+    good = list(range(n))
     allMatch = True
     for i, x in enumerate(sq.grid[0]):
         if x != good[i]:
@@ -244,7 +244,7 @@ def test_validHoles():
     assert(not sq.validHoles())
 
     h1.value = 0
-    h2.options = range(n)
+    h2.options = list(range(n))
     sq.checkHoleOptions()
     sq.updateHoleOptions(h1)
     assert(len(sq.holes[1].options) == 1)
